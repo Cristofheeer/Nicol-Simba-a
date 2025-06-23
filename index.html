@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Académico - Neuroeducación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    /* Quitar viñetas y espacios de todas las listas */
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    /* Estilos para las imágenes decorativas dentro de las secciones */
+    .decorative-img {
+      max-width: 180px;
+      opacity: 0.25;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 0 1rem 1rem 1rem;
+      float: right;
+    }
+
+    /* Para la imagen que flota a la izquierda */
+    .decorative-img.left {
+      float: left;
+      margin: 0 1rem 1rem 0;
+    }
+
+    /* Ajuste responsive para las imágenes */
+    @media (max-width: 768px) {
+      .decorative-img {
+        float: none !important;
+        display: block;
+        margin: 1rem auto;
+        max-width: 60%;
+        opacity: 0.15;
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="animalitos-canvas"></canvas>
+
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="logo">Neuroeducación</h1>
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#definicion">Neuroeducación</a></li>
+          <li><a href="#factores">Factores</a></li>
+          <li><a href="#importancia">Importancia</a></li>
+          <li><a href="#estructura">Cerebro</a></li>
+          <li><a href="#neurotransmisores">Neurotransmisores</a></li>
+          <li><a href="#aplicaciones">Aplicaciones</a></li>
+          <li><a href="#bibliografia">Bibliografía</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+      <button id="darkModeToggle" aria-label="Cambiar tema">🌓</button>
+    </div>
+  </header>
+<section class="dato-container" data-aos="zoom-in">
+  <button id="mostrarDato" class="btn-dato">🧠 Dato curioso</button>
+  <div id="popupDato" class="popup-dato"></div>
+</section>
+
+  <main class="container">
+    <section class="intro" data-aos="fade-down">
+      <h2>Bienvenido al Blog Académico sobre Neuroeducación</h2>
+      <p>Explora cómo el conocimiento del cerebro está transformando la educación inicial para crear experiencias de aprendizaje más efectivas y humanas.</p>
+    </section>
+
+    <section id="definicion" class="card" data-aos="fade-up">
+      <h3>¿Qué es la neuroeducación?</h3>
+      <img src="https://img.freepik.com/vector-premium/ilustracion-educacion-pajaro-dibujos-animados_29937-10499.jpg" alt="Pajarito educativo" class="decorative-img" />
+      <p>La neuroeducación es un campo interdisciplinario que integra la <strong>neurociencia</strong>, la <strong>psicología</strong> y la <strong>educación</strong> para comprender cómo aprende el cerebro y aplicar ese conocimiento para mejorar los procesos educativos.</p>
+      <p>Este enfoque busca construir metodologías basadas en evidencia científica que favorezcan el desarrollo cognitivo, emocional y social del estudiante.</p>
+      <h4>Orígenes y desarrollo</h4>
+      <p>La neuroeducación comenzó a consolidarse en la década de 2000, gracias a avances en técnicas de imagen cerebral que permitieron observar cómo se activan distintas áreas durante el aprendizaje.</p>
+      <p>Hoy, aporta herramientas para docentes, diseñadores de currículo y padres, facilitando estrategias pedagógicas más efectivas.</p>
+    </section>
+
+    <section id="factores" class="card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Factores que intervienen en la neuroeducación</h3>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2CW2f79yWnPEgvzo0D4CmNKn5FRfH5G5H_A&s" alt="Niños aprendiendo" class="decorative-img left" />
+      <ul>
+        <li><strong>Emoción:</strong> Las emociones influyen directamente en la atención, la memoria y la motivación. Por ejemplo, un ambiente positivo y seguro promueve la liberación de neurotransmisores que facilitan el aprendizaje.</li>
+        <li><strong>Atención:</strong> Es el filtro que determina qué información se procesa y qué se ignora. La capacidad de concentración varía según la edad y el contexto.</li>
+        <li><strong>Motivación:</strong> Elemento clave para el compromiso. Los sistemas de recompensa cerebral activan la dopamina, incentivando la exploración y el esfuerzo.</li>
+        <li><strong>Neuroplasticidad:</strong> El cerebro es moldeable y cambia con la experiencia. Esto permite que se puedan desarrollar nuevas habilidades y corregir dificultades.</li>
+        <li><strong>Ambiente:</strong> Un entorno físico y emocional estimulante favorece el desarrollo neuronal. La interacción social y la diversidad de estímulos son fundamentales.</li>
+        <li><strong>Sueño:</strong> Es imprescindible para la consolidación de la memoria y la regulación emocional.</li>
+        <li><strong>Alimentación:</strong> Nutrientes adecuados apoyan la función cerebral y el bienestar general.</li>
+      </ul>
+    </section>
+
+    <section id="importancia" class="card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Importancia de la neuroeducación</h3>
+      <p>La neuroeducación permite diseñar estrategias didácticas que se ajustan a cómo aprende el cerebro, incrementando la eficacia del proceso educativo.</p>
+      <h4>Beneficios principales</h4>
+      <ul>
+        <li><strong>Personalización:</strong> Adaptar la enseñanza a las necesidades y ritmos individuales.</li>
+        <li><strong>Inclusión:</strong> Facilita la integración de estudiantes con dificultades o necesidades especiales.</li>
+        <li><strong>Prevención:</strong> Identifica factores que pueden afectar el aprendizaje, permitiendo intervenciones tempranas.</li>
+        <li><strong>Mejora del bienestar:</strong> Promueve ambientes emocionales positivos que favorecen el aprendizaje.</li>
+        <li><strong>Desarrollo integral:</strong> Considera aspectos cognitivos, emocionales y sociales.</li>
+      </ul>
+    </section>
+
+    <section id="estructura" class="card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Estructura y funcionamiento del cerebro</h3>
+      <p>El cerebro es el órgano encargado de procesar la información y controlar las funciones del cuerpo. Se compone de varias áreas especializadas que colaboran para el aprendizaje:</p>
+      <ul>
+        <li><strong>Corteza prefrontal:</strong> Responsable de la toma de decisiones, planificación, autorregulación y control emocional.</li>
+        <li><strong>Lóbulo temporal:</strong> Procesa la memoria, el lenguaje y la información auditiva.</li>
+        <li><strong>Lóbulo occipital:</strong> Se encarga del procesamiento visual, interpretando imágenes y colores.</li>
+        <li><strong>Cerebelo:</strong> Coordina la motricidad fina y el equilibrio.</li>
+        <li><strong>Hipocampo:</strong> Fundamental para la formación y consolidación de nuevos recuerdos.</li>
+        <li><strong>Amígdala:</strong> Procesa emociones como el miedo y la recompensa, modulando la memoria emocional.</li>
+      </ul>
+      <h4>Comunicación neuronal</h4>
+      <p>Las neuronas transmiten información mediante impulsos eléctricos y químicos llamados neurotransmisores. Estos forman redes que permiten la plasticidad y el aprendizaje continuo.</p>
+    </section>
+
+    <section id="neurotransmisores" class="card" data-aos="fade-up" data-aos-delay="400">
+      <h3>Neurotransmisores y sus funciones</h3>
+      <ul>
+        <li><strong>Dopamina:</strong> Relacionada con la motivación, placer y recompensa. Ayuda a enfocar la atención y motivar el aprendizaje.</li>
+        <li><strong>Serotonina:</strong> Regula el estado de ánimo, el sueño y la ansiedad, influyendo en la capacidad para aprender y memorizar.</li>
+        <li><strong>Noradrenalina:</strong> Aumenta la atención y la respuesta frente a estímulos estresantes, favoreciendo la alerta.</li>
+        <li><strong>Acetilcolina:</strong> Participa en la memoria y en el control de los músculos, facilitando el aprendizaje motor y cognitivo.</li>
+      </ul>
+    </section>
+
+    <section id="aplicaciones" class="card" data-aos="fade-up" data-aos-delay="500">
+      <h3>Aplicaciones prácticas de la neuroeducación</h3>
+      <p>La neuroeducación tiene aplicaciones que impactan directamente en la forma de enseñar y aprender:</p>
+      <ul>
+        <li><strong>Diseño de ambientes escolares:</strong> Espacios seguros, con iluminación y colores adecuados que estimulen el cerebro.</li>
+        <li><strong>Metodologías activas:</strong> Uso de juegos, proyectos y técnicas que involucren emociones y motivación.</li>
+        <li><strong>Atención a la diversidad:</strong> Adaptación de la enseñanza para estudiantes con trastornos del aprendizaje o discapacidades.</li>
+        <li><strong>Programas de formación docente:</strong> Capacitar a profesores en estrategias basadas en neurociencia.</li>
+        <li><strong>Uso de tecnología educativa:</strong> Herramientas digitales que permiten personalizar el aprendizaje.</li>
+      </ul>
+    </section>
+
+   <section id="bibliografia" class="card" data-aos="fade-up" data-aos-delay="600">
+  <h3>Recursos y bibliografía (Formato APA 7ª edición)</h3>
+  <ul>
+    <li>Tokuhama-Espinosa, T. (2011). <em>Mind, brain, and education science: A comprehensive guide to the new brain-based teaching</em>. W. W. Norton & Company.</li>
+    <li>Jensen, E. (2008). <em>Teaching with the brain in mind</em> (2nd ed.). ASCD.</li>
+    <li>Sousa, D. A. (2016). <em>How the brain learns</em> (4th ed.). Corwin.</li>
+    <li>Ministerio de Educación del Ecuador. (2023). <em>Currículo de educación inicial</em>. https://educacion.gob.ec</li>
+    <li>American Psychological Association. (2020). <em>Publication manual of the American Psychological Association</em> (7th ed.). https://doi.org/10.1037/0000165-000</li>
+  </ul>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Realizado por: Nicol Simabaña </p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Actualiza fecha actual en el footer
+    document.getElementById('fecha').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
